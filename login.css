@@ -97,8 +97,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    /* overflow: hidden; */
 
+  }
+
+  .wrapper .login-form {
+    /*display: none;*/
+  }
+
+  .wrapper .registration-form {
+    position: absolute;
+    transform: translateX(400px);
   }
 
   .wrapper .X {
@@ -124,6 +133,11 @@
   }
 
   .wrapper .login-form h2 {
+    font-size: 2em;
+    color: greenyellow;
+    text-align: center;
+  }
+  .wrapper .registration-form h2 {
     font-size: 2em;
     color: greenyellow;
     text-align: center;
