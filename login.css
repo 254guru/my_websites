@@ -47,7 +47,7 @@
     margin-left: 40px;
   }
 
-  .navigation_tab .login-popup {
+  .navigation_tab .btnlogin-popup {
     width: 130px;
     height: 50px;
     background: transparent;
@@ -80,7 +80,7 @@
     transform: scaleX(1);
   }
 
-  .navigation_tab .login-popup:hover {
+  .navigation_tab .btnlogin-popup:hover {
     background: #fff;
     color: 2px solid #162938;
   }
@@ -98,8 +98,12 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    transition: height .2s ease;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
 
+  }
+  .wrapper.active-popup {
+    transform: scale(1);
   }
 
   .wrapper.active {
@@ -227,7 +231,7 @@
     text-decoration: underline;
   }
 
-  .button1 {
+  .btn {
     width: 100%;
     height: 45px;
     background: blue;
