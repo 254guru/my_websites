@@ -97,17 +97,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
+    overflow: hidden;
+    transition: height .2s ease;
 
   }
 
-  .wrapper .login-form {
-    /*display: none;*/
-  }
-
-  .wrapper .registration-form {
-    position: absolute;
-    transform: translateX(400px);
+  .wrapper.active {
+    height: 520px;
   }
 
   .wrapper .X {
@@ -126,10 +122,17 @@
     cursor: pointer;
     z-index: 1;
   }
+  .wrapper.active .login-form {
+    transition: none;
+    transform: translateX(-400px);
+  }
 
   .wrapper .login-form {
     width: 100%;
     padding: 40px;
+    /* display: none; */
+    transition: transform .18s ease;
+    transform: translateX(0);
   }
 
   .wrapper .login-form h2 {
@@ -137,6 +140,18 @@
     color: greenyellow;
     text-align: center;
   }
+
+  .wrapper .registration-form {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+  }
+
+  .wrapper.active .registration-form {
+    transition: transform .18s ease;
+    transform: translateX(0);
+  }
+
   .wrapper .registration-form h2 {
     font-size: 2em;
     color: greenyellow;
@@ -225,7 +240,7 @@
     font-weight: 500;
   }
 
-  .login-sign-up {
+  .login-register {
     font-size: .9em;
     color: greenyellow;
     text-align: center;
@@ -233,12 +248,12 @@
     margin: 25px 0 10px;
   }
 
-  .login-sign-up p a {
+  .login-register p a {
     color: orange;
     text-decoration: none;
     font-weight: 600;
   }
 
-  .login-sign-up p a:hover {
+  .login-register p a:hover {
     text-decoration: underline;
   }
