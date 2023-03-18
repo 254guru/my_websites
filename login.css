@@ -41,17 +41,18 @@
   .navigation_tab a {
     position: relative;
     font-size: 1.1em;
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
+    text-shadow: 0 0 60px;
   }
 
   .navigation_tab .btnlogin-popup {
     width: 130px;
     height: 50px;
     background: transparent;
-    border: 2px solid purple;
+    border: 2px solid green;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
@@ -234,7 +235,7 @@
   .btn {
     width: 100%;
     height: 40px;
-    background: blue;
+    background: green;
     border: none;
     outline: none;
     border-radius: 100px;
