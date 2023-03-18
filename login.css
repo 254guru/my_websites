@@ -51,12 +51,12 @@
   .navigation_tab .btnlogin-popup {
     width: 130px;
     height: 50px;
-    background: transparent;
+    background: #fff;
     border: 2px solid green;
     outline: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 1.5em;
     font-weight: 500;
     margin-left: 40px;
     transition: .5s;
@@ -82,8 +82,7 @@
   }
 
   .navigation_tab .btnlogin-popup:hover {
-    background: #fff;
-    color: 2px solid #162938;
+    background: #162938;
   }
 
   .wrapper {
