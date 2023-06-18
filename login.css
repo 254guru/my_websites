@@ -247,32 +247,6 @@
     font-weight: 500;
   }
 
-  .footer {
-    width: 100%;
-    height: 30px;
-    padding: 0 2rem;
-    border: 1px solid black;
-    border-radius: 100px;
-    outline: none;
-    background: #fff;
-    margin: 10px 0 10px;
-    font-size: 1em;
-    display: flex;
-  }
-
-  .footer a {
-    gap: 15px;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-  }
-
   .login-register {
     font-size: .9em;
     color: greenyellow;
