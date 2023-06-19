@@ -7,6 +7,7 @@
     <title>contact page</title>
     <link rel="shortcut icon" type="image/jpg" href="images/favicon (3).ico"/>
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
 </head>
 <body background="images/6193328_3202168.jpg"><br>
 
@@ -17,42 +18,51 @@
             <a href="about.html">About</a>
             <a href="#">contact</a>
             <a href="#">Services</a>
-            <button class="btnlogin-popup">Login</button>
         </nav>
     </header>
-
-    <div class="container">
-        <form onsubmit="sendEmail(); reset(); return false;">
-            <span class="X">
-                <ion-icon name="close"></ion-icon>
-            </span>
-            <h2>contact us</h2>
-            <input type="text" id="name" placeholder="your name" required>
-            <input type="email" id="email" placeholder="email address" required>
-            <input type="text" id="phone" placeholder="phone no." required>
-            <textarea name="message" rows="5" placeholder="how can we help you?"></textarea>
-            <button type="submit">send</button>
-        </form>
+    
+  <div class="container">
+    <div class="content">
+      <div class="left-side">
+        <div class="address details">
+          <i class="fas fa-map-marker-alt"></i>
+          <div class="topic">Address</div>
+          <div class="text-one">Siaya, 043</div>
+          <div class="text-two">Nairobi, 002</div>
+        </div>
+        <div class="phone details">
+          <i class="fas fa-phone-alt"></i>
+          <div class="topic">Phone</div>
+          <div class="text-one">+2541 234 567 89</div>
+          <div class="text-two">+2542 345 678 90</div>
+        </div>
+        <div class="email details">
+          <i class="fas fa-envelope"></i>
+          <div class="topic">Email</div>
+          <div class="text-one">techiekev0@gmail.com</div>
+          <div class="text-two">info@kevinoluda.com</div>
+        </div>
+      </div>
+      <div class="right-side">
+        <div class="topic-text">Send us a message</div>
+        <p>If you have any work for me or any types of quries related to my posts you can send me message from here. It's my pleasure to help you.</p>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" placeholder="Enter your name" required>
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box message-box">
+            <input type="text" placeholder="write your message here" required>
+        </div>
+        <div class="button">
+          <input type="button" value="Send Now" >
+        </div>
+      </form>
     </div>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function sendEmail(){
-            Email.send({
-                Host : "smtp.elasticemail.com",
-                Username : "oludakevin@gmail.com",
-                Password : "2D82EA7CFCE1DDC02960453F22BDD979E3A9",
-                To : 'oludakevin@gmail.com',
-                From : document.getElementById("email").value,
-                Subject : "New contact form enquiry",
-                Body : "Name: " + document.getElementById("name").value
-                    + "<br> Email: " + document.getElementById("email").value
-                    + "<br> Phone no: " + document.getElementById("phone").value
-                    + "<br> Message: " + document.getElementById("message").value
-            }).then(
-            message => alert("message sent successfully")
-            );
-        }
-    </script>
+    </div>
+  </div>
     <script src="contact.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
