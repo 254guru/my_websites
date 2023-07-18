@@ -37,24 +37,29 @@
     user-select: none;
 
   }
+  nav{
+    position: relative;
+    background: #34495e;
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,0.1);
+  }
 
   .navigation_tab a {
     position: relative;
-    font-size: 1.1em;
-    color: black;
-    background: #fff;
-    border: 2px solid greenyellow;
-    outline: none;
-    border-radius: 6px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
     text-decoration: none;
-    font-weight: 500;
-    margin-left: 40px;
+    line-height:50px;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
   }
 
   .navigation_tab .btnlogin-popup {
     width: 130px;
     height: 50px;
-    background: #fff;
     border: 2px solid green;
     outline: none;
     border-radius: 6px;
@@ -64,29 +69,56 @@
     margin-left: 40px;
     transition: .5s;
   }
-
-  .navigation_tab a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    width: 100%;
-    height: 3px;
-    background: #fff;
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .5s;
-  }
-
-  .navigation_tab a:hover:after {
-    transform-origin: left;
-    transform: scaleX(1);
-  }
-
   .navigation_tab .btnlogin-popup:hover {
     background: #162938;
   }
+  nav .animation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: #1abc9c;
+    border-radius: 8px;
+    transition:all;
+    -webkit-transition:all .5s ease 0s;
+    
+}
+a:nth-child(1){
+    width: 100px;
+}
+nav .start-home,a:nth-child(1):hover~.animation{
+    width: 100px;
+    left: 0;
+}
+a:nth-child(2){
+    width: 110px;
+}
+nav .start-about,a:nth-child(2):hover~.animation{
+    width: 110px;
+    left: 100px;
+}
+a:nth-child(3){
+    width: 100px;
+}
+nav .start-home,a:nth-child(3):hover~.animation{
+    width: 100px;
+    left: 210px;
+}
+a:nth-child(4){
+    width: 160px;
+}
+nav .start-portfolio,a:nth-child(4):hover~.animation{
+    width: 160px;
+    left: 310px;
+}
+a:nth-child(5){
+    width: 120px;
+}
+nav .start-contact,a:nth-child(5):hover~.animation{
+    width: 120px;
+    left: 470px;
+}
+
 
   .wrapper {
     position: relative;
