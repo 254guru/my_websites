@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LANDING PAGE</title>
+    <title>COLLARK DESIGNERS</title>
     <link rel="shortcut icon" type="image/jpg" href="images/favicon (3).ico"/>
     <link rel="stylesheet" href="login.css">
 </head>
@@ -58,8 +58,6 @@
       auth2 = gapi.auth2.init({
         client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
         cookiepolicy: 'single_host_origin',
-        // Request scopes in addition to 'profile' and 'email'
-        //scope: 'additional_scope'
       });
       attachSignin(document.getElementById('customBtn'));
     });
@@ -112,13 +110,9 @@
       padding-right: 42px;
       font-size: 14px;
       font-weight: bold;
-      /* Use the Roboto font that is loaded in the <head> */
-      font-family: 'Roboto', sans-serif;
     }
   </style>
-
-  <!-- In the callback, you would hide the gSignInWrapper element on a
-  successful sign in -->
+  
   <div id="gSignInWrapper">
     <span class="label">Sign in with:</span>
     <div id="customBtn" class="customGPlusSignIn">
